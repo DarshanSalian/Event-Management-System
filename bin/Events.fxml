@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Events">
+   <left>
+      <AnchorPane opacity="0.55" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: red;" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="event_venue_dash" layoutX="24.0" layoutY="71.0" onMouseClicked="#event_venue_click" text="Venue">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="38.0" fitWidth="42.0">
+                     <image>
+                        <Image url="gazebo.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <Label layoutX="24.0" layoutY="153.0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="event_notify_dash" layoutX="15.0" layoutY="263.0" onMouseClicked="#event_notify_click" prefHeight="75.0" prefWidth="170.0" text="Booking Histroy" wrapText="true">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="44.0" fitWidth="46.0">
+                     <image>
+                        <Image url="notification.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <Label fx:id="event_supply_dash" layoutX="24.0" layoutY="168.0" onMouseClicked="#event_supplier_click" text="Supplier">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="46.0" fitWidth="47.0">
+                     <image>
+                        <Image url="inventory.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+         </children>
+      </AnchorPane>
+   </left>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="146.0" layoutY="14.0" text="Events">
+               <font>
+                  <Font name="System Bold Italic" size="36.0" />
+               </font>
+            </Label>
+            <Label layoutX="53.0" layoutY="118.0" text="Event Name:">
+               <font>
+                  <Font name="System Italic" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="eventName" layoutX="152.0" layoutY="115.0" promptText="Event Name" style="-fx-border-color: red;" />
+            <Label layoutX="57.0" layoutY="157.0" text="Event Type:">
+               <font>
+                  <Font name="System Italic" size="14.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="eventType" layoutX="151.0" layoutY="154.0" prefWidth="150.0" style="-fx-border-color: red;" />
+            <Label layoutX="76.0" layoutY="83.0" text="Event ID:">
+               <font>
+                  <Font name="System Italic" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="eventId" layoutX="152.0" layoutY="80.0" promptText="ID" style="-fx-border-color: red;">
+               <cursor>
+                  <Cursor fx:constant="MOVE" />
+               </cursor>
+            </TextField>
+            <Label layoutX="22.0" layoutY="292.0" text="Event Description:">
+               <font>
+                  <Font name="System Italic" size="14.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="eventDescription" layoutX="152.0" layoutY="261.0" prefHeight="101.0" prefWidth="180.0" style="-fx-border-color: red;" />
+            <Label layoutX="28.0" layoutY="197.0" text="Event Start Date:">
+               <font>
+                  <Font name="System Italic" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="25.0" layoutY="229.0" text="Event Start Date:">
+               <font>
+                  <Font name="System Italic" size="14.0" />
+               </font>
+            </Label>
+            <DatePicker fx:id="eventStartDate" layoutX="154.0" layoutY="194.0" promptText="2022-04-08" style="-fx-border-color: red;" />
+            <DatePicker fx:id="eventEndDate" layoutX="154.0" layoutY="226.0" promptText="2022-04-09" style="-fx-border-color: red;" />
+            <Button fx:id="eventAddbtn" layoutX="228.0" layoutY="374.0" mnemonicParsing="false" onAction="#Add" style="-fx-border-color: red; -fx-background-color: pink;" text="ADD">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="eventResetbtn" layoutX="281.0" layoutY="374.0" mnemonicParsing="false" onAction="#Reset" style="-fx-border-color: red; -fx-background-color: pink;" text="RESET">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Button>
+         </children>
+         <cursor>
+            <Cursor fx:constant="DISAPPEAR" />
+         </cursor>
+      </AnchorPane>
+   </center>
+</BorderPane>

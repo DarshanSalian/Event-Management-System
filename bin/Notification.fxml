@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Notification">
+   <left>
+      <AnchorPane opacity="0.55" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: red;" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="notify_event_dash" layoutX="38.0" layoutY="91.0" onMouseClicked="#notify_event_click" text="Events">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="37.0" fitWidth="37.0">
+                     <image>
+                        <Image url="planner.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <Label fx:id="notify_venue_dash" layoutX="39.0" layoutY="181.0" onMouseClicked="#notify_venue_click" text="Venue">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="37.0" fitWidth="37.0">
+                     <image>
+                        <Image url="gazebo.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <Label fx:id="notify_supplier_dash" layoutX="39.0" layoutY="277.0" onMouseClicked="#notify_supplier_click" text="Supplier">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="40.0">
+                     <image>
+                        <Image url="inventory.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+         </children>
+      </AnchorPane>
+   </left>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="64.0" layoutY="14.0" text="Booking Histroy">
+               <font>
+                  <Font name="System Bold Italic" size="36.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="notification_container" layoutX="13.0" layoutY="68.0" prefHeight="118.0" prefWidth="370.0" style="-fx-border-color: red;" />
+            <TextArea fx:id="retriveContainer" layoutX="15.0" layoutY="235.0" prefHeight="58.0" prefWidth="370.0" style="-fx-border-color: red;" />
+            <Label layoutX="15.0" layoutY="200.0" />
+            <Label layoutX="15.0" layoutY="199.0" text="Event ID:">
+               <font>
+                  <Font name="System Italic" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="notifyCustomerID" layoutX="111.0" layoutY="196.0" prefHeight="27.0" prefWidth="176.0" promptText="Enter Event ID to Retreive" style="-fx-border-color: red;" />
+            <Button fx:id="RETREIVE" layoutX="229.0" layoutY="349.0" mnemonicParsing="false" onAction="#notifyRetreivebtn" style="-fx-background-color: pink; -fx-border-color: red;" text="RETREIVE">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="DELETE" layoutX="311.0" layoutY="349.0" mnemonicParsing="false" onAction="#notifyDeletebtn" style="-fx-background-color: pink; -fx-border-color: red;" text="DELETE">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LoginController">
+   <left>
+      <AnchorPane prefHeight="400.0" prefWidth="206.0" style="-fx-background-color: pink; -fx-border-radius: 50%;" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="username" layoutX="28.0" layoutY="138.0" promptText="Username" style="-fx-border-color: red;" />
+            <PasswordField fx:id="password" layoutX="29.0" layoutY="200.0" promptText="Password" style="-fx-border-color: red;" />
+            <Button fx:id="LoginBtn" layoutX="65.0" layoutY="292.0" mnemonicParsing="false" onAction="#loginButtonAction" prefHeight="30.0" prefWidth="78.0" style="-fx-background-color: red; -fx-border-color: pink;" text="Login" textFill="#f4efef">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="signinToggle" layoutX="133.0" layoutY="14.0" mnemonicParsing="false" onAction="#siginButtonAction" prefHeight="31.0" prefWidth="58.0" style="-fx-background-color: red; -fx-border-color: pink;" text="Sign In" textFill="#f4efef">
+               <font>
+                  <Font name="System Bold Italic" size="10.0" />
+               </font>
+            </Button>
+            <Label fx:id="validcheck" alignment="CENTER" layoutX="19.0" layoutY="79.0" prefHeight="18.0" prefWidth="170.0" />
+          <!--   <Button fx:id="toggleLogin" layoutX="125.0" layoutY="14.0" mnemonicParsing="false" onAction="#ToggleLoginbtn" prefHeight="31.0" prefWidth="66.0" style="-fx-border-color: pink; -fx-background-color: red;" text="Sign In" textFill="#f4efef">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Button> -->
+         </children>
+      </AnchorPane>
+   </left>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="400.0" fitWidth="392.0" layoutX="1.0">
+               <image>
+                  <Image url="@photo.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

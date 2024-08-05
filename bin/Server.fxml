@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: pink;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ServerController">
+   <children>
+<TextArea fx:id="serverTextArea" layoutX="65.0" layoutY="26.0" prefHeight="200.0" prefWidth="469.0" />
+      <TextField fx:id="ServerTextField" alignment="TOP_CENTER" layoutX="64.0" layoutY="259.0" prefHeight="26.0" prefWidth="470.0" text="Your Username and Password is Confirmed" />
+      <Button fx:id="serverVerify" layoutX="273.0" layoutY="320.0" mnemonicParsing="false" onAction="#ServerBtn" text="Verified" />
+   </children>
+</AnchorPane>

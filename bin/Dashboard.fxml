@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dashboard">
+   <top>
+      <AnchorPane prefHeight="68.0" prefWidth="600.0" style="-fx-background-color: pink;" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" layoutX="207.0" layoutY="7.0" prefHeight="35.0" prefWidth="186.0" text="Dashboard" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold Italic" size="36.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </top>
+   <center>
+      <AnchorPane opacity="0.94" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane layoutX="27.0" layoutY="14.0" prefHeight="150.0" prefWidth="150.0">
+               <children>
+                  <ImageView fx:id="event_dashboard" fitHeight="151.0" fitWidth="151.0" onMouseClicked="#event_dash">
+                     <image>
+                        <Image url="event_dash.jpeg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="319.0" layoutY="14.0" prefHeight="150.0" prefWidth="150.0">
+               <children>
+                  <ImageView fx:id="venue_dashboard" fitHeight="150.0" fitWidth="153.0" onMouseClicked="#venue_dash">
+                     <image>
+                        <Image url="venue_dashboard.jpeg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="27.0" layoutY="173.0" prefHeight="150.0" prefWidth="150.0">
+               <children>
+                  <ImageView fx:id="suppliers_dashboard" fitHeight="154.0" fitWidth="151.0" layoutX="1.0" onMouseClicked="#suppliers_dash">
+                     <image>
+                        <Image url="supply_dashboard.jpeg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="319.0" layoutY="173.0" prefHeight="150.0" prefWidth="150.0" style="-fx-background-color: pink;">
+               <children>
+                  <ImageView fx:id="notification_dashboard" fitHeight="153.0" fitWidth="153.0" onMouseClicked="#notification_dash">
+                     <image>
+                        <Image url="notification_dashboard.jpeg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <Label alignment="CENTER" layoutX="202.0" layoutY="79.0" prefHeight="30.0" prefWidth="64.0" text="Events">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="202.0" layoutY="219.0" prefHeight="30.0" prefWidth="80.0" text="Suppliers">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="493.0" layoutY="79.0" prefHeight="30.0" prefWidth="64.0" text="Venue">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="484.0" layoutY="219.0" prefHeight="69.0" prefWidth="106.0" text="Booking Histroy" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

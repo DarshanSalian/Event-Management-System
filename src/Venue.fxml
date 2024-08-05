@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Venue">
+   <left>
+      <AnchorPane opacity="0.55" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: red;" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="venue_event_dash" layoutX="36.0" layoutY="80.0" onMouseClicked="#venue_event_click" text="Events">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="37.0" fitWidth="37.0">
+                     <image>
+                        <Image url="planner.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <Label fx:id="venue_supplier_dash" layoutX="39.0" layoutY="180.0" onMouseClicked="#venue_supplier_click" text="Supplier">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="40.0">
+                     <image>
+                        <Image url="inventory.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <Label fx:id="venue_notification_dash" layoutX="36.0" layoutY="283.0" onMouseClicked="#venue_notify_click" text="Booking Histroy" wrapText="true">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="37.0" fitWidth="37.0">
+                     <image>
+                        <Image url="notification.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+         </children>
+      </AnchorPane>
+   </left>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="148.0" layoutY="14.0" text="Venue">
+               <font>
+                  <Font name="System Bold Italic" size="36.0" />
+               </font>
+            </Label>
+            <Label layoutX="85.0" layoutY="68.0" text="Venue ID:">
+               <font>
+                  <Font name="System Italic" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="venueID" layoutX="172.0" layoutY="64.0" promptText="ID" style="-fx-border-color: red;" />
+            <Label layoutX="45.0" layoutY="110.0" text="Venue Capacity:">
+               <font>
+                  <Font name="System Italic" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="venueCapacity" layoutX="172.0" layoutY="106.0" promptText="Capacity" style="-fx-border-color: red;" />
+            <Label layoutX="46.0" layoutY="151.0" text="Venue Location:">
+               <font>
+                  <Font name="System Italic" size="14.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="venueLocation" layoutX="172.0" layoutY="151.0" prefHeight="73.0" prefWidth="161.0" style="-fx-border-color: red;" />
+            <Label layoutX="77.0" layoutY="246.0" text="Venue Cost:">
+               <font>
+                  <Font name="System Italic" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="venueCost" layoutX="172.0" layoutY="242.0" promptText="Cost" style="-fx-border-color: red;" />
+            <Label layoutX="73.0" layoutY="299.0" text="Venue Image:">
+               <font>
+                  <Font name="System Italic" size="14.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="venueImage" fitHeight="74.0" fitWidth="117.0" layoutX="172.0" layoutY="282.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: OPEN_HAND;" />
+            <Button fx:id="venueAddbtn" layoutX="272.0" layoutY="367.0" mnemonicParsing="false" onAction="#Add" style="-fx-background-color: pink; -fx-border-color: red;" text="ADD">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="venueResetbtn1" layoutX="330.0" layoutY="367.0" mnemonicParsing="false" onAction="#Reset" style="-fx-background-color: pink; -fx-border-color: red;" text="RESET">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="eventBrowsebtn" layoutX="301.0" layoutY="305.0" mnemonicParsing="false" onAction="#Browse" style="-fx-background-color: pink; -fx-border-color: red;" text="Browse">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
